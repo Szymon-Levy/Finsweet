@@ -30,16 +30,13 @@ body{
     max-width: 1800px;
     margin: 0 auto;
 }
-.container.grid,
-.small-container.grid{
+.container.grid{
     display: grid;
     gap: 30px;
 }
-.small-container{
-    padding: 0 15px;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+h1{
+    font-size: 40px;
+    line-height: 50px;
 }
 img{
     width: 100%;
@@ -49,10 +46,26 @@ img{
 a {
     text-decoration: none;
 }
+b,
+strong {
+    font-weight: 700;
+}
 button{
     border: 0;
     outline: none;
     cursor: pointer;
+}
+.main-button{
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 20px 45px;
+    cursor: pointer;
+}
+.main-button:hover{
+    background-color: var(--hover-bg);
 }
 
 
@@ -223,6 +236,51 @@ button{
 
 /*-----------hero section------------*/
 
+section.main-hero {
+    background: url(images/home/hero/hero-mobile.jpg) no-repeat center right;
+    background-size: cover;
+    min-height: 500px;
+    padding: 80px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.main-hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-hero .top-heading{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.main-hero h1{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.main-hero p.line-text {
+    position: relative;
+    padding-left: 28px;
+    font-size: 17px;
+    line-height: 1.4;
+    margin-top: 50px;
+}
+
+.main-hero p.line-text::before{
+    content: "";
+    width: 23px;
+    height: 2.5px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+
+
 
 
 
@@ -250,14 +308,19 @@ button{
     .small-container{
         padding: 0 30px;
     }
+    section.main-hero {
+        background-image: url(images/home/hero/hero-desktop.jpg);
+        min-height: 600px;
+    }
 }
 
 @media (min-width: 992px) {
     .container{
         padding: 0 45px;
     }
-    .small-container{
-        padding: 0 45px;
+    #main-header .header-button button {
+        padding: 22px 60px;
+        font-size: inherit;
     }
     #main-header {
         padding: 0;
@@ -265,7 +328,7 @@ button{
     #main-header .header-button {
         margin-right: 0px;
     }
-    #main-header .header-button button {
+    .main-button {
         padding: 22px 60px;
         font-size: inherit;
     }
@@ -303,6 +366,20 @@ button{
     #main-navigation ul li a.active{
         font-weight: 400;
     }
+    h1{
+        font-size: 82px;
+        line-height: 105px;
+    }
+    .main-hero p.line-text {
+        font-size: inherit;
+        margin-top: 80px;
+    }
+    .main-hero .top-heading {
+        margin-bottom: 20px;
+    }
+    .main-hero h1 {
+        margin-bottom: 45px;
+    }
 }
 
 
@@ -315,5 +392,8 @@ button{
     }
     #main-navigation ul li:not(:last-child) {
         margin-right: 55px;
+    }
+    section.main-hero {
+        min-height: 850px;
     }
 }
