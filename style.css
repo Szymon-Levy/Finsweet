@@ -72,7 +72,7 @@ button{
     background-color: var(--hover-bg);
 }
 .main-heading{
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 .main-heading.center{
     text-align: center;
@@ -80,10 +80,16 @@ button{
 .main-heading p {
     font-size: 20.5px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 .main-heading .title {
     font-size: 40px;
     line-height: 52px;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.main-heading .title-small {
     letter-spacing: -.5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -331,6 +337,54 @@ section.intro-boxes {
 }
 
 
+/*----------Moved down image section---------*/
+
+section.down-image {
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+section.down-image .container{
+    max-width: 1470px;
+}
+
+.down-image .center-text {
+    text-align: center;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.down-image .main-button {
+    margin-top: 40px;
+}
+
+.down-image .container.three-images {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.down-image .container.bottom-text .main-heading {
+    padding-bottom: 20px;
+}
+
+.down-image .container.bottom-text .center-text {
+    max-width: 660px;
+}
+
+.down-image .small-arrow-button {
+    color: inherit;
+    font-weight: normal;
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.down-image .small-arrow-button img{
+    width: 23px;
+    margin-left: 8px;
+}
+
+
 /*------------Bottom-------------*/
 
 
@@ -385,6 +439,9 @@ section.intro-boxes {
     .main-heading .title {
         font-size: 61.5px;
         line-height: 82px;
+    }
+    .main-heading p {
+        margin-bottom: 15px;
     }
     .offcanvas-toggler {
         display: none;
@@ -444,6 +501,16 @@ section.intro-boxes {
     .intro-boxes .container.grid.boxes {
         grid-template-columns: repeat(3, 1fr);
     }
+    section.down-image {
+        padding-bottom: 120px;
+    }
+    .down-image .container.three-images {
+        margin-top: -20px;
+        grid-template-columns: 1.5fr 2fr 1.5fr;
+    }
+    .down-image .container.three-images .big-image{
+        margin-top: 60px;
+    }
 }
 
 
@@ -462,5 +529,9 @@ section.intro-boxes {
     }
     .intro-boxes .intro-box {
         padding: 100px;
+    }
+    .main-button {
+        padding: 36px 106px;
+        font-size: 26px;
     }
 }
